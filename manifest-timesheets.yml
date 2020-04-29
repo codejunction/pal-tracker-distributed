@@ -3,6 +3,8 @@ applications:
 - name: tracker-timesheets
   instances: 1
   memory: 256M
+  buildpacks:
+    - https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
   routes:
   - route: timesheets-pal-abhishek.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.2/publish
