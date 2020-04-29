@@ -8,7 +8,8 @@ applications:
   routes:
   - route: timesheets-pal-abhishek.cfapps.io
   path: Applications/TimesheetsServer/bin/Release/netcoreapp2.2/publish
-  env:
-    REGISTRATION_SERVER_ENDPOINT: http://registration-pal-abhishek.cfapps.io/
+  #env:
+  #  REGISTRATION_SERVER_ENDPOINT: http://registration-pal-abhishek.cfapps.io/
   services:
+  - tracker-service-registry
   - tracker-timesheets-database

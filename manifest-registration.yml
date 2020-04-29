@@ -9,4 +9,5 @@ applications:
   - route: registration-pal-abhishek.cfapps.io
   path: Applications/RegistrationServer/bin/Release/netcoreapp2.2/publish
   services:
+  - tracker-service-registry
   - tracker-registration-database
