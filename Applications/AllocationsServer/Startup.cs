@@ -49,7 +49,7 @@ namespace AllocationsServer
                 var logger = sp.GetService<ILogger<ProjectClient>>();
                 return new ProjectClient(httpClient, logger);
             });
-           // services.AddDiscoveryClient(Configuration);
+            services.AddDiscoveryClient(Configuration);
             services.AddHystrixMetricsStream(Configuration);
         }
 
