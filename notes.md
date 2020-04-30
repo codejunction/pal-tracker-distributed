@@ -61,6 +61,19 @@ cd ~/workspace/assignment-submission
 
 ### PAL Circuit Breaker
 
+## CURL Commands
+```curl
+curl -i -X POST http://registration-pal-abhishek.cfapps.io/registration -H "Content-Type: application/json"   -d "{\"name\": \"Tommy\"}"
+curl -i http://registration-pal-abhishek.cfapps.io/accounts?ownerId=31       ---> id 21
+curl -i -X POST -H "Content-Type: application/json" http://registration-pal-abhishek.cfapps.io/projects -d "{\"name\": \"Hollywood\", \"accountId\": 21}"  --> id 11
+curl -i -X POST -H "Content-Type: application/json" http://registration-pal-abhishek.cfapps.io/projects -d "{\"name\": \"Green Mile\", \"accountId\": 21}" --> id 21
+curl -i -X POST -H "Content-Type: application/json" http://allocations-pal-abhishek.cfapps.io/allocations/ -d "{\"projectId\": 11, \"userId\": 31, \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}"  
+--STOP REG SERVER---------------------------------------
+curl -i -X POST -H "Content-Type: application/json" http://allocations-pal-abhishek.cfapps.io/allocations/ -d "{\"projectId\": 21, \"userId\": 31, \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}"
+curl -i -X POST -H "Content-Type: application/json" http://allocations-pal-abhishek.cfapps.io/allocations/ -d "{\"projectId\": 11, \"userId\": 31, \"firstDay\": \"2015-05-17\", \"lastDay\": \"2015-05-18\"}"
+
+```
+
 ## Command Assignment Sub
 cd ~/workspace/assignment-submission
 ./gradlew dotnetCloudNativeDeveloperDistributedSystemWithCircuitBreaker -PregistrationServerUrl=https://registration-pal-abhishek.cfapps.io -PbacklogServerUrl=https://backlog-pal-abhishek.cfapps.io -PallocationsServerUrl=https://allocations-pal-abhishek.cfapps.io -PtimesheetsServerUrl=https://timesheets-pal-abhishek.cfapps.io
