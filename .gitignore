@@ -32,3 +32,4 @@ msbuild.wrn
 .gradle
 CI/variables.yml
 .vs
+serve.bat
