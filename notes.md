@@ -58,3 +58,9 @@ cd ~/workspace/assignment-submission
 ## Command Assignment Sub
 cd ~/workspace/assignment-submission
 ./gradlew dotnetCloudNativeDeveloperDistributedSystemWithServiceDiscovery -PregistrationServerUrl=https://registration-pal-abhishek.cfapps.io -PbacklogServerUrl=https://backlog-pal-abhishek.cfapps.io -PallocationsServerUrl=https://allocations-pal-abhishek.cfapps.io -PtimesheetsServerUrl=https://timesheets-pal-abhishek.cfapps.io
+
+### PAL Circuit Breaker
+
+## Command Assignment Sub
+cd ~/workspace/assignment-submission
+./gradlew dotnetCloudNativeDeveloperDistributedSystemWithCircuitBreaker -PregistrationServerUrl=https://registration-pal-abhishek.cfapps.io -PbacklogServerUrl=https://backlog-pal-abhishek.cfapps.io -PallocationsServerUrl=https://allocations-pal-abhishek.cfapps.io -PtimesheetsServerUrl=https://timesheets-pal-abhishek.cfapps.io
