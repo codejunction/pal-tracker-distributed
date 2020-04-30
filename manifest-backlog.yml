@@ -1,16 +1,19 @@
 ---
 applications:
-- name: tracker-backlog
-  instances: 1
-  memory: 256M
-  buildpacks:
-    - https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
-  routes:
-  - route: backlog-pal-abhishek.cfapps.io
-  path: Applications/BacklogServer/bin/Release/netcoreapp2.2/publish
-  #env:
-  #  REGISTRATION_SERVER_ENDPOINT: http://registration-pal-abhishek.cfapps.io/
-  services:
-  - tracker-service-registry
-  - tracker-backlog-database
-  - tracker-amqp
+  - name: tracker-backlog
+    instances: 1
+    memory: 256M
+    buildpacks:
+      - https://github.com/cloudfoundry/dotnet-core-buildpack/releases/download/v2.3.2/dotnet-core-buildpack-cflinuxfs3-v2.3.2.zip
+    routes:
+      - route: backlog-pal-abhishek.cfapps.io
+    path: Applications/BacklogServer/bin/Release/netcoreapp2.2/publish
+    env:
+      GRANT_TYPE: client_credentials
+    #env:
+    #  REGISTRATION_SERVER_ENDPOINT: http://registration-pal-abhishek.cfapps.io/
+    services:
+      - tracker-service-registry
+      - tracker-backlog-database
+      - tracker-amqp
+      - tracker-sso
