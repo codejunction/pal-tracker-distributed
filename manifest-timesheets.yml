@@ -17,3 +17,4 @@ applications:
       - tracker-timesheets-database
       - tracker-amqp
       - tracker-sso
+      - tracker-config-server

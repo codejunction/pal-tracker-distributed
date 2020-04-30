@@ -17,3 +17,4 @@ applications:
       - tracker-backlog-database
       - tracker-amqp
       - tracker-sso
+      - tracker-config-server
